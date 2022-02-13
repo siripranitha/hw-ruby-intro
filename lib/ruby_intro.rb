@@ -100,7 +100,8 @@ class BookInStock
   attr_accessor :isbn,:price
 # YOUR CODE HERE
   def initialize(isbn,price)
-    if !isbn or price<0
+      
+    if isbn.length==0 or price<=0
       raise ArgumentError.new("wrong input types")
     end
     @isbn= isbn
